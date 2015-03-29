@@ -1,12 +1,7 @@
 <?php
 define('ROOT', dirname(__FILE__)); 
 
-// $host = 'localhost';
-// $user = 'root';
-// $pw = 'root';
-// $db = 'localhost';
-
-// $conn = new mysqli($host, $user, $pw, $db);
+session_start();
 
 // Autoload classes
 spl_autoload_register(function($className) 
@@ -23,11 +18,12 @@ spl_autoload_register(function($className)
 	}
 });
 
+require_once('app/lib/header.php');
+
 $app = Bootstrap::getInstance();
 $app->init();
 
-$c = new Connector();
+require_once('app/lib/footer.php');
 
-print_r($c);
 
 ?>

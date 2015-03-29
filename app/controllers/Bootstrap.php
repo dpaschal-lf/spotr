@@ -1,18 +1,6 @@
 <?php
 class Bootstrap 
 {
-
-	public static function getInstance()
-	{
-		static $instance = null;
-
-		if (!$instance) {
-			$instance = new Bootstrap();
-		}
-
-		return $instance;
-	}
-
 	protected function __construct()
 	{
 		if ($_GET['controller'] === '') {
@@ -28,13 +16,19 @@ class Bootstrap
 		}
 	}
 
+	public static function getInstance()
+	{
+		static $instance = null;
+
+		if (!$instance) {
+			$instance = new Bootstrap();
+		}
+
+		return $instance;
+	}
+
 	// prevent cloning of instance
 	private function __clone() {}
-
-	public function set_model($model) 
-	{
-		$this->model = new $model();
-	}
 
 	public function init() 
 	{

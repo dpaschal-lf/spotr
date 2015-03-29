@@ -12,9 +12,8 @@ abstract class Controller
 	public function return_view($view) 
 	{
 		$src = 'app/views/' . $view . '.php';
-		include('app/lib/header.php');
-		include($src);
-		include('app/lib/footer.php');
+		
+		require($src);
 	}
 }
 

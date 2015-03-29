@@ -1,0 +1,602 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"spl",
+				"spl_autoload_register"
+			],
+			[
+				"data",
+				"database"
+			],
+			[
+				"insert_",
+				"mysql_insert_id"
+			],
+			[
+				"get_template",
+				"get_template_directory_uri"
+			],
+			[
+				"no",
+				"none"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "2<?php\ndefine('ROOT', dirname(__FILE__)); \n\nsession_start();\n\n// Autoload classes\nspl_autoload_register(function($className) \n{\n	$controllers = scandir(ROOT . '/app/controllers');\n	$models = scandir(ROOT . '/app/models');\n\n	if (in_array($className . '.php', $controllers)) {\n		require ROOT . '/app/controllers/' . $className . '.php';\n	} \n\n	if (in_array($className . '.php', $models)) {\n		require ROOT . '/app/models/' . $className . '.php';\n	}\n});\n\n$app = Bootstrap::getInstance();\n$app->init();\n\n\n\n\n?>\n",
+			"file": "index.php",
+			"file_size": 503,
+			"file_write_time": 130702206500000000,
+			"settings":
+			{
+				"buffer_size": 504,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/Brian/Downloads/mapmyclimb/app/models/User.php",
+			"settings":
+			{
+				"buffer_size": 8624,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/Brian/Downloads/mapmyclimb/app/views/climbs/add/route.php",
+			"settings":
+			{
+				"buffer_size": 10380,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
+				"pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"pacage",
+				"Package Control: List Packages"
+			],
+			[
+				"packag",
+				"Package Control: Remove Package"
+			],
+			[
+				"package ",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 593.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/Brian/Downloads/mapmyclimb",
+		"/Users/Brian/Downloads/mapmyclimb/app",
+		"/Users/Brian/Downloads/mapmyclimb/app/models",
+		"/Users/Brian/Downloads/mapmyclimb/app/models/Map"
+	],
+	"file_history":
+	[
+		"/Users/Brian/Desktop/LearningFuze/week 9/blog/classes/Post.php",
+		"/Users/Brian/Desktop/LearningFuze/week 9/blog/js/main.js",
+		"/Users/Brian/Desktop/LearningFuze/week 9/blog/update-profile.php",
+		"/Users/Brian/Desktop/LearningFuze/week 9/blog/templates/profile.php",
+		"/Users/Brian/Sites/Learningfuze/login.php",
+		"/Users/Brian/Desktop/LearningFuze/week 9/blog/login.php",
+		"/Users/Brian/Desktop/LearningFuze/week 9/blog/user.php",
+		"/Users/Brian/Desktop/LearningFuze/week 9/blog/post.php",
+		"/Users/Brian/Desktop/LearningFuze/week 9/blog/css/main.scss",
+		"/Users/Brian/Desktop/LearningFuze/week 9/blog/index.php",
+		"/Users/Brian/Desktop/LearningFuze/week 9/blog/templates/post/content-editor.php",
+		"/Users/Brian/Desktop/LearningFuze/week 9/blog/templates/sidebar.php",
+		"/Users/Brian/Desktop/LearningFuze/week 9/blog/templates/loop.php",
+		"/Users/Brian/Desktop/LearningFuze/week 9/blog/classes/User.php",
+		"/Users/Brian/Desktop/LearningFuze/week 9/blog/templates/header.php",
+		"/Users/Brian/Desktop/LearningFuze/week 9/blog/templates/footer.php",
+		"/Users/Brian/Desktop/LearningFuze/week 9/blog/upload.php",
+		"/Users/Brian/Desktop/LearningFuze/week 9/blog/templates/img-uploader.php",
+		"/Users/Brian/Desktop/LearningFuze/week 9/blog/templates/login-form.php",
+		"/Users/Brian/Desktop/LearningFuze/week 9/blog/classes/Sanitizr.php",
+		"/Users/Brian/Desktop/LearningFuze/week 9/blog/templates/jumbotron.php",
+		"/Users/Brian/Desktop/LearningFuze/week 9/blog/js/imagesloaded.js",
+		"/Users/Brian/Desktop/LearningFuze/week 9/blog/templates/admin-bar.php",
+		"/Users/Brian/Desktop/LearningFuze/week 9/blog/templates/searchbar.php",
+		"/Users/Brian/Desktop/LearningFuze/week 9/blog/js/jquery-1.11.2.js",
+		"/Users/Brian/Desktop/LearningFuze/week 9/blog/css/mixin.scss",
+		"/Users/Brian/Desktop/LearningFuze/week 9/blog/templates/post/title-input.php",
+		"/Users/Brian/Desktop/LearningFuze/week 9/blog/create-post.php",
+		"/Users/Brian/Desktop/LearningFuze/week 9/blog/classes/Data.php",
+		"/Users/Brian/Desktop/LearningFuze/week 9/blog/test.php",
+		"/Users/Brian/Sites/Learningfuze/editor.php",
+		"/Users/Brian/Sites/Learningfuze/upload/uploadform.php",
+		"/Users/Brian/Sites/Learningfuze/upload/uploadhandler_easy.php",
+		"/Users/Brian/Desktop/LearningFuze/week 9/blog/templates/title-input.php",
+		"/Users/Brian/Downloads/js/require.js",
+		"/Users/Brian/Desktop/LearningFuze/week 9/blog/templates/sidebar/sidebar.php",
+		"/Users/Brian/Desktop/LearningFuze/week 9/blog/templates/sidebar/searchbar.php",
+		"/Users/Brian/Desktop/LearningFuze/week 9/blog/classes/autoload.php",
+		"/Users/Brian/Desktop/ji-boilerplate/css/normalize.scss",
+		"/Users/Brian/Desktop/LearningFuze/week 9/blog/templates/login.php",
+		"/Users/Brian/Desktop/LearningFuze/week 9/blog/css/loop.php",
+		"/Users/Brian/Desktop/LearningFuze/week 8/todo/classes/autoloader.php",
+		"/Applications/MAMP/bin/php/php5.5.10/conf/php.ini",
+		"/Applications/MAMP/bin/php/php5.4.26/conf/php.ini",
+		"/Users/Brian/Desktop/LearningFuze/week 8/todo/templates/todolist.php",
+		"/Users/Brian/Desktop/LearningFuze/week 8/todo/todoitem.php",
+		"/Users/Brian/Desktop/LearningFuze/week 8/todo/classes/Foo.php",
+		"/Users/Brian/Desktop/LearningFuze/week 8/todo/classes/User.php",
+		"/Users/Brian/Downloads/js/backbone-master/examples/todos/todos.js",
+		"/Users/Brian/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/Users/Brian/Desktop/LearningFuze/week 8/todo/controller.php",
+		"/Users/Brian/Desktop/LearningFuze/week 8/todo/classes/Todo.php",
+		"/Users/Brian/Downloads/js/backbone-master/examples/todos/todos.css",
+		"/Users/Brian/Desktop/LearningFuze/week 8/todo/css/main.scss",
+		"/Users/Brian/Desktop/LearningFuze/week 8/todo/templates/footer.php",
+		"/Users/Brian/Desktop/LearningFuze/week 8/todo/todo.php",
+		"/Users/Brian/Desktop/LearningFuze/week 8/todo/js/main.js",
+		"/Users/Brian/Desktop/LearningFuze/week 8/todo/templates/todo.php",
+		"/Users/Brian/Desktop/LearningFuze/week 8/todo/index.php",
+		"/Users/Brian/Desktop/LearningFuze/week 8/todo/templates/todoapp.php",
+		"/Users/Brian/Desktop/LearningFuze/week 8/todo/todoapp.php",
+		"/Users/Brian/Downloads/js/backbone-master/examples/todos/index.html",
+		"/Users/Brian/Desktop/LearningFuze/week 8/todo/classes/Data.php",
+		"/Users/Brian/Desktop/LearningFuze/week 8/todo/classes/todo.php",
+		"/Users/Brian/Desktop/LearningFuze/week 8/todo/templates/header.php",
+		"/Users/Brian/Desktop/LearningFuze/week 8/todo/js/Todo.php",
+		"/Users/Brian/Desktop/LearningFuze/week 8/todo/js/DbFetcher.php",
+		"/Users/Brian/Desktop/LearningFuze/week 6/student-grades/classes/Student.php",
+		"/Users/Brian/Desktop/LearningFuze/week 6/student-grades/js/main.js",
+		"/Users/Brian/Desktop/LearningFuze/week 6/student-grades/index.php",
+		"/Users/Brian/Desktop/LearningFuze/week 6/student-grades/student-list.php",
+		"/Users/Brian/Desktop/LearningFuze/week 6/student-grades/student-controller.php",
+		"/Users/Brian/Desktop/LearningFuze/week 6/student-grades/main.scss",
+		"/Users/Brian/Desktop/LearningFuze/week 6/student-grades/main.js",
+		"/Users/Brian/Desktop/LearningFuze/week 6/student-grades/delete-all.php",
+		"/Users/Brian/Desktop/LearningFuze/week 6/student-grades/delete-student.php",
+		"/Users/Brian/Sites/Localhost/index.php",
+		"/Users/Brian/Sites/Localhost/css/main.css",
+		"/Users/Brian/Desktop/LearningFuze/set2/MBoutique Project Php/css/main.css",
+		"/Users/Brian/Desktop/LearningFuze/set2/MBoutique Project Php/welcome.html",
+		"/Users/Brian/Desktop/LearningFuze/set2/MBoutique Project Ajax/welcome.html",
+		"/Users/Brian/Sites/Localhost/css/main.scss",
+		"/Users/Brian/Sites/Php/index.php",
+		"/Users/Brian/Sites/jibrian/wp-content/themes/brianji/header.php",
+		"/Users/Brian/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/Brian/Sites/jibrian/wp-content/themes/brianji/style.css.map",
+		"/Users/Brian/Sites/jibrian/wp-content/themes/brianji/css/normalize.scss",
+		"/Users/Brian/Downloads/font-awesome-4.3.0/scss/_larger.scss",
+		"/Users/Brian/Downloads/font-awesome-4.3.0/css/font-awesome.css",
+		"/Users/Brian/Downloads/font-awesome-4.3.0/less/core.less",
+		"/Users/Brian/Downloads/font-awesome-4.3.0/less/path.less",
+		"/Users/Brian/Sites/jibrian/wp-content/themes/brianji/js/main.js",
+		"/Users/Brian/Sites/jibrian/wp-content/themes/brianji/loop.php",
+		"/Users/Brian/Sites/jibrian/wp-content/themes/brianji/footer.php",
+		"/Users/Brian/Sites/jibrian/wp-content/themes/brianji/about.php",
+		"/Users/Brian/Sites/jibrian/wp-content/themes/brianji/style.css",
+		"/Users/Brian/Sites/jibrian/wp-content/themes/brianji/intro.php",
+		"/Users/Brian/Sites/jibrian/wp-content/themes/brianji/functions.php",
+		"/Users/Brian/Desktop/Lab/quick.html",
+		"/Users/Brian/Sites/jibrian/wp-content/themes/brianji/index.php",
+		"/Users/Brian/Sites/jibrian/wp-content/themes/brianji/projects-loop.php",
+		"/Users/Brian/Sites/wolfandman/wp-includes/general-template.php",
+		"/Users/Brian/Sites/Juice/app/core/footer.php",
+		"/Users/Brian/Sites/Juice/app/core/header.php",
+		"/Users/Brian/Sites/Juice/public/index.php",
+		"/Users/Brian/Sites/Juice/app/controllers/Home.php",
+		"/Users/Brian/Sites/Juice/app/controllers/Controller.php",
+		"/Users/Brian/Sites/Juice/app/views/register.php",
+		"/Users/Brian/Sites/Juice/.htaccess",
+		"/Users/Brian/Sites/Juice/public/.htaccess",
+		"/Users/Brian/Sites/Juice/index.php",
+		"/Users/Brian/Sites/juice/index.php",
+		"/Users/Brian/Sites/spotr/app/controllers/Bootstrap.php",
+		"/Users/Brian/Sites/Juice/app/controllers/Test.php",
+		"/Users/Brian/Sites/Juice/app/views/foo.php",
+		"/Users/Brian/Sites/Juice/app/views/test.php",
+		"/Users/Brian/Sites/Juice/app/controllers/index.php",
+		"/Users/Brian/Sites/Juice/app/controllers/Testy.php",
+		"/Users/Brian/Sites/Juice/app/views/testy.php",
+		"/Users/Brian/Sites/Juice/app/controllers/Validatr.php",
+		"/Users/Brian/Sites/spotr/app/controllers/BaseController.php",
+		"/Users/Brian/Sites/spotr/app/controllers/Home.php",
+		"/Users/Brian/Sites/Juice/app/controllers/Controllers.php",
+		"/Users/Brian/Sites/localhost/index.php",
+		"/Users/Brian/Downloads/mapmyclimb/index.php",
+		"/Users/Brian/Downloads/mapmyclimb/app/controllers/Logout.php",
+		"/Users/Brian/Sites/spotr/app/views/home.php",
+		"/Users/Brian/Sites/spotr/app/views/index.php"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"editing",
+			"eidintg",
+			"trigger",
+			"post",
+			"upload.php",
+			"change",
+			"update",
+			"upload",
+			"create",
+			"post",
+			"login",
+			"location",
+			"login",
+			"reload",
+			"username",
+			"profile",
+			"editor",
+			"success",
+			"btn",
+			"alert",
+			"amber",
+			"login",
+			"lastpostid",
+			"json",
+			"JSON",
+			"message",
+			"login",
+			"post-loop",
+			"75s",
+			"sanitize",
+			"data",
+			"jumbo",
+			"main-jumbotron",
+			"login",
+			"sidebar",
+			"post-loop",
+			"max",
+			"test",
+			"main-sidebar",
+			"single",
+			"singlepost",
+			"sidebar",
+			"link",
+			"admin",
+			"data",
+			"post",
+			"ogin",
+			"post",
+			"fileType",
+			"tmp_name",
+			"data",
+			"Data",
+			"data",
+			"move_succeeded",
+			"acceptable_types",
+			"imagefiletype",
+			"imageFileType",
+			"uploadOk",
+			"upLoadOk",
+			"uploadOk",
+			"uploadOK",
+			"uploadOk",
+			"uploadOK",
+			"uploadOk",
+			"target_dir",
+			"target_file",
+			"event",
+			"wysiwyg",
+			"span",
+			"h1",
+			"echo",
+			"conn",
+			"jumbotron",
+			"ho",
+			"jumbotron",
+			"hover",
+			"header",
+			"form",
+			"todolist",
+			"window",
+			"render",
+			"rebder",
+			"body",
+			"template",
+			"body",
+			"template",
+			"var",
+			"view",
+			"test",
+			"checkbox",
+			"new date",
+			"width",
+			"todo-list",
+			"red",
+			"float",
+			"input",
+			"font-size",
+			"checked",
+			"text-align",
+			"text-alin",
+			"ul",
+			"shrunk",
+			"collection",
+			"date",
+			"render",
+			"duedate",
+			"createModel",
+			"refreshlist",
+			"this",
+			"assoc",
+			"duedate",
+			"dudedate",
+			"listento",
+			"listto",
+			"create",
+			"input",
+			"create",
+			"fetch",
+			"destroy",
+			"render",
+			"create",
+			"listento",
+			"listento'",
+			"listento",
+			"addone",
+			"listento",
+			"add",
+			"itemlist"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"this.h",
+			"this.w"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 504,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								478,
+								478
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/Brian/Downloads/mapmyclimb/app/models/User.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 8624,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 87.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 2,
+					"file": "/Users/Brian/Downloads/mapmyclimb/app/views/climbs/add/route.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 10380,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.554245814956,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 101.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "spotr.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"main",
+				"~/Downloads/snake-game-master/main.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 193.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
