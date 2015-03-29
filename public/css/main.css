@@ -1,0 +1,38 @@
+html,
+body,
+h1 {
+  margin: 0;
+  padding: 0; }
+
+ul {
+  list-style: none; }
+
+li {
+  text-decoration: none; }
+
+/******************************
+	TABLE OF CONTENTS
+		Structure
+
+******************************/
+/******************************
+	STRUCTURE
+******************************/
+header#main-header {
+  background: black;
+  color: white; }
+
+#new-session {
+  width: 50%; }
+  #new-session li {
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 60px;
+    overflow: hidden;
+    margin: 5px; }
+    #new-session li header {
+      background: black;
+      color: white;
+      text-align: center; }
+
+/*# sourceMappingURL=main.css.map */

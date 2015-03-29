@@ -1,0 +1,31 @@
+@import 'normalize.scss';
+/******************************
+	TABLE OF CONTENTS
+		Structure
+
+******************************/
+
+/******************************
+	STRUCTURE
+******************************/
+
+header#main-header {
+	background: black;
+	color: white;
+}
+
+#new-session {
+	width: 50%;
+	li {
+		border: 2px solid black;
+		border-radius: 5px;
+		height: 60px;
+		overflow: hidden;
+		margin: 5px;
+		header {
+			background: black;
+			color: white;
+			text-align: center;
+		}
+	}
+}

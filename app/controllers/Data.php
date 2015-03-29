@@ -1,4 +1,6 @@
 <?php
+namespace App;
+
 class Data 
 {	
 	static $host = 'localhost';
@@ -11,6 +13,10 @@ class Data
 		$this->conn = new mysqli(Self::$host, Self::$user, Self::$pw, Self::$db);
 	}
 
+	public function conn()
+	{
+		return new new mysqli(Self::$host, Self::$user, Self::$pw, Self::$db);
+	}
 }
 
 ?>	

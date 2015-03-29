@@ -1,29 +1,20 @@
 <?php
 define('ROOT', dirname(__FILE__)); 
+define('APPDIR', dirname(__FILE__) . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR);
 
 session_start();
 
-// Autoload classes
-spl_autoload_register(function($className) 
-{
-	$controllers = scandir(ROOT . '/app/controllers');
-	$models = scandir(ROOT . '/app/models');
+require_once('app/lib/autoload.php');
 
-	if (in_array($className . '.php', $controllers)) {
-		require ROOT . '/app/controllers/' . $className . '.php';
-	} 
+require_once('app/views/header.php');
 
-	if (in_array($className . '.php', $models)) {
-		require ROOT . '/app/models/' . $className . '.php';
-	}
-});
+$app = App\Bootstrap::getInstance();
 
-require_once('app/lib/header.php');
-
-$app = Bootstrap::getInstance();
 $app->init();
 
-require_once('app/lib/footer.php');
+
+
+require_once('app/views/footer.php');
 
 
 ?>

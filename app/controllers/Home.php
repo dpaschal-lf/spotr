@@ -1,4 +1,5 @@
 <?php
+// namespace Controller;
 
 class Home extends Controller 
 {
@@ -7,6 +8,5 @@ class Home extends Controller
 		$this->return_view('session/new');
 	}
 }
-
 
 ?>
