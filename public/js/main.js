@@ -1,5 +1,9 @@
 var spotr = (function($) {
-	var app = {};
+	var app = {
+		views: {},
+		collection: {},
+		router: null,
+	};
 
 	var SessionModel = Backbone.Model.extend({
 		defaults: function() {
@@ -29,16 +33,35 @@ var spotr = (function($) {
 
 		className: 'session-item',
 
+		events: {
+			'click button.increment-btn': 'increment',
+			'click button.decrement-btn': 'decrement',
+		},
+
 		template: _.template( $('#session-item-template').html() ),
 
 		initialize: function() {
-			this.render();
+			this.listenTo( this.model, 'change', this.render );
 		},
 
 		render: function() {
 			this.$el.html( this.template( this.model.toJSON() ) );
 
 			return this;
+		},
+
+		increment: function(e) {
+			var rowGrade = e.target.getAttribute('data-grade');
+	
+			this.model.set(rowGrade, this.model.get(rowGrade) + 1);
+		},
+
+		decrement: function(e) {
+			var rowGrade = e.target.getAttribute('data-grade');
+			
+			if (this.model.get(rowGrade) > 0) {
+				this.model.set(rowGrade, this.model.get(rowGrade) - 1);
+			}
 		}
 	});
 
@@ -46,20 +69,18 @@ var spotr = (function($) {
 		model: SessionModel,
 	});
 
-	app.sessionCollection = new SessionCollection;
-
 	var AppView = Backbone.View.extend({
-		el: '#app-container',
-
 		events: {
 			'click button#new-session-btn': 'createSession',
 		},
 
 		initialize: function() {
+			this.setElement( $('#app-container') );
 			// Observes collection for new models and
 			// when new model is added, appendSession is called
 			// and passed new model
-			this.listenTo(app.sessionCollection, 'add', this.appendSession);
+			this.listenTo(app.collection.sessions, 'add', this.appendSession);
+
 		},
 
 		appendSession: function(sessionModel) {
@@ -71,20 +92,19 @@ var spotr = (function($) {
 		createSession: function() {
 			var session = new SessionModel();
 
-			console.log(session.toJSON());
-			app.sessionCollection.add(session);
-
-
+			app.collection.sessions.add(session);
 		},
 	});
-
-	app.appView = new AppView;
 
 	var AppRouter = Backbone.Router.extend({
 		routes: {
 			'': function() {
-				
+				app.collection.sessions = new SessionCollection;
+				app.views.appView = new AppView;
 			},
+			'dev': function() {
+				$('body').append('working dev');
+			}
 
 		}
 	})

@@ -28,29 +28,106 @@
 	"buffers":
 	[
 		{
-			"contents": "2<?php\ndefine('ROOT', dirname(__FILE__)); \n\nsession_start();\n\n// Autoload classes\nspl_autoload_register(function($className) \n{\n	$controllers = scandir(ROOT . '/app/controllers');\n	$models = scandir(ROOT . '/app/models');\n\n	if (in_array($className . '.php', $controllers)) {\n		require ROOT . '/app/controllers/' . $className . '.php';\n	} \n\n	if (in_array($className . '.php', $models)) {\n		require ROOT . '/app/models/' . $className . '.php';\n	}\n});\n\n$app = Bootstrap::getInstance();\n$app->init();\n\n\n\n\n?>\n",
 			"file": "index.php",
-			"file_size": 503,
-			"file_write_time": 130702206500000000,
 			"settings":
 			{
-				"buffer_size": 504,
+				"buffer_size": 326,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/Brian/Downloads/mapmyclimb/app/models/User.php",
+			"file": "app/lib/User.php",
 			"settings":
 			{
-				"buffer_size": 8624,
+				"buffer_size": 1130,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/Brian/Downloads/mapmyclimb/app/views/climbs/add/route.php",
+			"file": "app/lib/Sanitizer.php",
 			"settings":
 			{
-				"buffer_size": 10380,
+				"buffer_size": 126,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/footer.php",
+			"settings":
+			{
+				"buffer_size": 336,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/session/new.php",
+			"settings":
+			{
+				"buffer_size": 538,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/header.php",
+			"settings":
+			{
+				"buffer_size": 351,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/css/main.scss",
+			"settings":
+			{
+				"buffer_size": 473,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/css/normalize.scss",
+			"settings":
+			{
+				"buffer_size": 102,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/lib/Data.php",
+			"settings":
+			{
+				"buffer_size": 261,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/js/main.js",
+			"settings":
+			{
+				"buffer_size": 1644,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/Home.php",
+			"settings":
+			{
+				"buffer_size": 139,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/lib/autoload.php",
+			"settings":
+			{
+				"buffer_size": 1639,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/Brian/Desktop/LearningFuze/week 8/todo/js/main.js",
+			"settings":
+			{
+				"buffer_size": 6519,
 				"line_ending": "Unix"
 			}
 		}
@@ -107,13 +184,41 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/Brian/Downloads/mapmyclimb",
+		"/Users/Brian/Projects/spotr",
+		"/Users/Brian/Projects/spotr/app",
+		"/Users/Brian/Projects/spotr/app/controllers",
+		"/Users/Brian/Projects/spotr/app/lib",
+		"/Users/Brian/Projects/spotr/app/views",
+		"/Users/Brian/Projects/spotr/app/views/session",
+		"/Users/Brian/Projects/spotr/public",
+		"/Users/Brian/Projects/spotr/public/js",
 		"/Users/Brian/Downloads/mapmyclimb/app",
-		"/Users/Brian/Downloads/mapmyclimb/app/models",
-		"/Users/Brian/Downloads/mapmyclimb/app/models/Map"
+		"/Users/Brian/Downloads/mapmyclimb/app/libraries",
+		"/Users/Brian/Downloads/mapmyclimb/app/models/Map",
+		"/Users/Brian/Downloads/mapmyclimb/app/views/climbs",
+		"/Users/Brian/Downloads/mapmyclimb/app/views/climbs/add",
+		"/Users/Brian/Downloads/mapmyclimb/static/js/vendor"
 	],
 	"file_history":
 	[
+		"/Users/Brian/Projects/spotr/app/lib/Data.php",
+		"/Users/Brian/Projects/spotr/app/controllers/Data.php",
+		"/Users/Brian/Projects/spotr/app/controllers/Controller.php",
+		"/Users/Brian/Projects/spotr/app/views/session/new.php",
+		"/Users/Brian/Projects/spotr/app/lib/header.php",
+		"/Users/Brian/Projects/spotr/app/lib/footer.php",
+		"/Users/Brian/Projects/spotr/app/lib/Bootstrap.php",
+		"/Users/Brian/Projects/spotr/app/lib/Dev.php",
+		"/Users/Brian/Downloads/mapmyclimb/index.php",
+		"/Users/Brian/Projects/spotr/app/lib/Autoloader.php",
+		"/Users/Brian/Projects/spotr/app/lib/autoloader.php",
+		"/Users/Brian/Projects/spotr/app/lib/User.php",
+		"/Users/Brian/Projects/spotr/app/controllers/Bootstrap.php",
+		"/Users/Brian/Projects/spotr/app/models/Database.php",
+		"/Users/Brian/Projects/spotr/app/controllers/Register.php",
+		"/Users/Brian/Projects/spotr/public/js/underscore-min.js",
+		"/Users/Brian/Projects/spotr/public/js/backbone-min.js",
+		"/Users/Brian/Projects/spotr/public/js/register.js",
 		"/Users/Brian/Desktop/LearningFuze/week 9/blog/classes/Post.php",
 		"/Users/Brian/Desktop/LearningFuze/week 9/blog/js/main.js",
 		"/Users/Brian/Desktop/LearningFuze/week 9/blog/update-profile.php",
@@ -223,29 +328,11 @@
 		"/Users/Brian/Sites/Juice/app/controllers/Controller.php",
 		"/Users/Brian/Sites/Juice/app/views/register.php",
 		"/Users/Brian/Sites/Juice/.htaccess",
-		"/Users/Brian/Sites/Juice/public/.htaccess",
-		"/Users/Brian/Sites/Juice/index.php",
-		"/Users/Brian/Sites/juice/index.php",
-		"/Users/Brian/Sites/spotr/app/controllers/Bootstrap.php",
-		"/Users/Brian/Sites/Juice/app/controllers/Test.php",
-		"/Users/Brian/Sites/Juice/app/views/foo.php",
-		"/Users/Brian/Sites/Juice/app/views/test.php",
-		"/Users/Brian/Sites/Juice/app/controllers/index.php",
-		"/Users/Brian/Sites/Juice/app/controllers/Testy.php",
-		"/Users/Brian/Sites/Juice/app/views/testy.php",
-		"/Users/Brian/Sites/Juice/app/controllers/Validatr.php",
-		"/Users/Brian/Sites/spotr/app/controllers/BaseController.php",
-		"/Users/Brian/Sites/spotr/app/controllers/Home.php",
-		"/Users/Brian/Sites/Juice/app/controllers/Controllers.php",
-		"/Users/Brian/Sites/localhost/index.php",
-		"/Users/Brian/Downloads/mapmyclimb/index.php",
-		"/Users/Brian/Downloads/mapmyclimb/app/controllers/Logout.php",
-		"/Users/Brian/Sites/spotr/app/views/home.php",
-		"/Users/Brian/Sites/spotr/app/views/index.php"
+		"/Users/Brian/Sites/Juice/public/.htaccess"
 	],
 	"find":
 	{
-		"height": 25.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -259,6 +346,23 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"self",
+			"Self",
+			"data",
+			"Self",
+			"APPPATH",
+			"class",
+			"use",
+			"require",
+			"application",
+			"0",
+			"url",
+			"create",
+			"collection",
+			"createmodel",
+			"include",
+			"private",
+			"min",
 			"editing",
 			"eidintg",
 			"trigger",
@@ -369,24 +473,7 @@
 			"refreshlist",
 			"this",
 			"assoc",
-			"duedate",
-			"dudedate",
-			"listento",
-			"listto",
-			"create",
-			"input",
-			"create",
-			"fetch",
-			"destroy",
-			"render",
-			"create",
-			"listento",
-			"listento'",
-			"listento",
-			"addone",
-			"listento",
-			"add",
-			"itemlist"
+			"duedate"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -406,7 +493,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 9,
 			"sheets":
 			[
 				{
@@ -415,15 +502,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 504,
+						"buffer_size": 326,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								478,
-								478
+								227,
+								227
 							]
 						],
 						"settings":
@@ -434,37 +521,290 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "/Users/Brian/Downloads/mapmyclimb/app/models/User.php",
-					"semi_transient": true,
+					"file": "app/lib/User.php",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8624,
+						"buffer_size": 1130,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								208,
+								208
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 87.0,
+						"translation.y": 312.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/lib/Sanitizer.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 126,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								39,
+								39
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/views/footer.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 336,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								62,
+								89
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/views/session/new.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 538,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								29,
+								29
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/views/header.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 351,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								313,
+								313
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "public/css/main.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 473,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								285,
+								285
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "public/css/normalize.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 102,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								68,
+								68
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "app/lib/Data.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 261,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								193,
+								193
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "public/js/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1644,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1082,
+								1082
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 820.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "app/controllers/Home.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 139,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								30,
+								30
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
 					"type": "text"
 				}
 			]
@@ -474,33 +814,61 @@
 			"sheets":
 			[
 				{
-					"buffer": 2,
-					"file": "/Users/Brian/Downloads/mapmyclimb/app/views/climbs/add/route.php",
-					"semi_transient": true,
+					"buffer": 11,
+					"file": "app/lib/autoload.php",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 10380,
+						"buffer_size": 1639,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1561,
+								1561
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 215.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "/Users/Brian/Desktop/LearningFuze/week 8/todo/js/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6519,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3110,
+								3110
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 12,
 					"type": "text"
 				}
 			]
@@ -534,7 +902,7 @@
 		"cols":
 		[
 			0.0,
-			0.554245814956,
+			0.96138996139,
 			1.0
 		],
 		"rows":
@@ -594,7 +962,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 193.0,
+	"side_bar_width": 196.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

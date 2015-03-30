@@ -34,5 +34,21 @@ header#main-header {
       background: black;
       color: white;
       text-align: center; }
+  #new-session li:first-child {
+    background: #FAFEF9; }
+  #new-session li:nth-child(2) {
+    background: #F3FE7C; }
+  #new-session li:nth-child(3) {
+    background: #FED14B; }
+  #new-session li:nth-child(4) {
+    background: #37AD38; }
+  #new-session li:nth-child(5) {
+    background: #3E9DFE; }
+  #new-session li:nth-child(6) {
+    background: #977BFE; }
+
+.is-centered-width {
+  margin: 0 auto;
+  max-width: 1080px; }
 
 /*# sourceMappingURL=main.css.map */

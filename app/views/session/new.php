@@ -8,10 +8,14 @@
 	<li>
 		<header class='grade'>V0</header>
 		<%= v0 %>
+		<button class='increment-btn' type='button' data-grade='v0'>+</button>
+		<button class='decrement-btn' type='button' data-grade='v0'>-</button>
 	</li>
 	<li>
 		<header class='grade'>V1</header>
 		<%= v1 %>
+		<button class='increment-btn' type='button' data-grade='v1'>+</button>
+		<button class='decrement-btn' type='button' data-grade='v1'>-</button>
 	</li>
 	<li>
 		<header class='grade'>V2</header>

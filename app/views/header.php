@@ -10,4 +10,4 @@
 		<button id='log-btn' type='button'>Log</button>
 		<button id='settings-btn' type='button'>Settings</button> 
 	</header>
-	<div id='app-container'>
+	<div id='app-container' class='is-centered-width'>
