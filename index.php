@@ -1,4 +1,5 @@
 <?php
+
 define('ROOT', dirname(__FILE__)); 
 define('APPDIR', dirname(__FILE__) . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR);
 
@@ -14,9 +15,7 @@ $app->init();
 
 require_once('app/views/footer.php');
 
-$c = new Controller();
+echo $app->controller, $app->action;
 
-print_r($c);
 
-echo 'sdfsdf';
 ?>

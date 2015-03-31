@@ -1,7 +1,8 @@
 <?php
-// namespace Controller;
+namespace Controller;
+use App;
 
-class Home extends Controller 
+class Home extends App\Controller 
 {
 	public function index() 
 	{

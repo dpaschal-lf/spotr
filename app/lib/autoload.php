@@ -1,22 +1,23 @@
 <?php
-
+// libary 
 spl_autoload_register(function($class){
 	$class = explode('\\', $class);
 	$class = array_pop($class);
 	$library_path = APPDIR . 'lib' . DIRECTORY_SEPARATOR;
 	$path_arr = explode('_', $class);
-	if( count( $path_arr ) > 1 ){
+	if ( count( $path_arr ) > 1 ){
 		array_pop($path_arr);
 		foreach( $path_arr as $folder ){
 			$library_path .= $folder . DIRECTORY_SEPARATOR;
 		}
 	}
 	$file_path = $library_path . $class . '.php';
-	if(file_exists( $file_path ) ){
+	if ( file_exists( $file_path ) ){
 		require_once($file_path);
 	}
 });
 
+// controller
 spl_autoload_register(function($class){
 	$class = explode('\\', $class);
     $class = array_pop($class);
@@ -39,6 +40,7 @@ spl_autoload_register(function($class){
     }
 });
 
+// model
 spl_autoload_register(function($class){
 	$class = explode('\\', $class);
 	$class = array_pop($class);

@@ -1,5 +1,6 @@
 <?php
 namespace App;
+use Controller;
 
 class Bootstrap 
 {
@@ -34,8 +35,9 @@ class Bootstrap
 
 	public function init() 
 	{
-		if (class_exists($this->controller)) {
-			$parents = class_parents($this->controller);
+		if (class_exists('Controller\\' . $this->controller)) {
+			$parents = class_parents('Controller\\' . $this->controller);
+			
 			if (in_array('Controller', $parents)) {
 				if (method_exists($this->controller, $this->action)) {
 					return new $this->controller($this->controller, $this->action);
@@ -43,10 +45,10 @@ class Bootstrap
 					echo 'error one';
 				} 
 			} else {
-				echo 'error two';
+				echo 'not in array';
 			}
 		} else {
-			echo 'error three';
+			echo 'class does not exist';
 		}
 	}
 }
