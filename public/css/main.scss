@@ -8,6 +8,10 @@
 /******************************
 	STRUCTURE
 ******************************/
+html,
+body {
+	
+}
 
 header#main-header {
 	background: black;
@@ -15,7 +19,6 @@ header#main-header {
 }
 
 div#app-container {
-
 }
 
 #new-session {
@@ -23,9 +26,9 @@ div#app-container {
 	li {
 		border: 2px solid black;
 		border-radius: 5px;
-		height: 60px;
-		overflow: hidden;
+		height: 80px;
 		margin: 5px;
+		overflow: hidden;
 		header {
 			background: black;
 			color: white;

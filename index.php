@@ -12,9 +12,11 @@ $app = App\Bootstrap::getInstance();
 
 $app->init();
 
-
-
 require_once('app/views/footer.php');
 
+$c = new Controller();
 
+print_r($c);
+
+echo 'sdfsdf';
 ?>

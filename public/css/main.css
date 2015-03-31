@@ -27,9 +27,9 @@ header#main-header {
   #new-session li {
     border: 2px solid black;
     border-radius: 5px;
-    height: 60px;
-    overflow: hidden;
-    margin: 5px; }
+    height: 80px;
+    margin: 5px;
+    overflow: hidden; }
     #new-session li header {
       background: black;
       color: white;
