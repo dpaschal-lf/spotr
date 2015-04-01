@@ -7,9 +7,9 @@ class Bootstrap
 	protected function __construct()
 	{
 		if ($_GET['controller'] === '') {
-			$this->controller = 'Home';
+			$this->controller = 'home';
 		} else {
-			$this->controller = ucfirst($_GET['controller']);
+			$this->controller = $_GET['controller'];
 		}
 
 		if ($_GET['action'] === '') {
@@ -30,17 +30,17 @@ class Bootstrap
 		return $instance;
 	}
 
-	// prevent cloning of instance
 	private function __clone() {}
 
 	public function init() 
 	{
 		if (class_exists('Controller\\' . $this->controller)) {
 			$parents = class_parents('Controller\\' . $this->controller);
-			
-			if (in_array('Controller', $parents)) {
-				if (method_exists($this->controller, $this->action)) {
-					return new $this->controller($this->controller, $this->action);
+
+			if (in_array('App\Controller', $parents)) {
+				if (method_exists("Controller\\$this->controller", $this->action)) {
+					$class = "Controller\\$this->controller";
+					return new $class($this->controller, $this->action);
 				} else {
 					echo 'error one';
 				} 

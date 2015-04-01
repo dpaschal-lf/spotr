@@ -1,4 +1,4 @@
-@import 'normalize.scss';
+@import 'reset.scss';
 /******************************
 	TABLE OF CONTENTS
 		Structure
@@ -22,7 +22,6 @@ div#app-container {
 }
 
 #new-session {
-	width: 50%;
 	li {
 		border: 2px solid black;
 		border-radius: 5px;
@@ -62,5 +61,5 @@ div#app-container {
 
 .is-centered-width {
 	margin: 0 auto;
-	max-width: 1080px;
+	max-width: 500px;
 }

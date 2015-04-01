@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA;;EAEG;EACF,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;;AAGX,EAAG;EACF,UAAU,EAAE,IAAI;;AAGjB,EAAG;EACF,eAAe,EAAE,IAAI",
-"sources": ["normalize.scss"],
-"names": [],
-"file": "normalize.css"
-}

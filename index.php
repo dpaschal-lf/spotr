@@ -15,7 +15,6 @@ $app->init();
 
 require_once('app/views/footer.php');
 
-echo $app->controller, $app->action;
-
-
 ?>
+
+

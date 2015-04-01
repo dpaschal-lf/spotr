@@ -98,16 +98,16 @@ var spotr = (function($) {
 	var AppRouter = Backbone.Router.extend({
 		routes: {
 			'': function() {
-				app.collection.sessions = new SessionCollection;
-				app.views.appView = new AppView;
 			},
-			'dev': function() {
-				$('body').append('working dev');
+			'session': function() {
+				app.collection.sessions.add({});
 			}
 
 		}
 	})
 
+	app.collection.sessions = new SessionCollection;
+	app.views.appView = new AppView;
 	app.router = new AppRouter;
 
 	Backbone.history.start();

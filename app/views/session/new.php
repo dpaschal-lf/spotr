@@ -1,7 +1,5 @@
 <section id='new-session'>
-
-	<button id='new-session-btn' type='button'>New Session</button>
-
+	<a href='#session'><button id='new-session-btn' type='button'>New Session</button></a>
 </section>
 
 <script id='session-item-template' type='text/template'>
