@@ -1,7 +1,7 @@
 var spotr = (function($) {
 	var app = {
 		views: {},
-		collection: {},
+		collections: {},
 		router: null,
 	};
 
@@ -21,7 +21,7 @@ var spotr = (function($) {
 	// 		'click button.decrement-btn': 'decrement',
 	// 	},
 
-	// 	template: _.template( $('#session-item-template').html() ),
+	// 	template: _.template( $('#session-item-tmpl').html() ),
 
 	// 	initialize: function() {
 	// 		this.listenTo( this.model, 'change', this.render );
@@ -70,26 +70,36 @@ var spotr = (function($) {
 
 	var BetaList = Backbone.Collection.extend({
 		model: UploadedBeta,
-
-		url: 'problem/beta/',
-
-		initialize: function () {
-			var self = this;
-
-			this.fetch({
-				url: self.url + 'maad',
-			});
-		}
 	})
 
-	window.foo = new BetaList;
+	var BetaView = Backbone.View.extend({
+		el: 'div',
+
+		className: 'beta-item',
+
+		template: _.template( '<p><%= name %></p><p><%= postDate %></p>' ),
+
+		events: {
+			
+		},
+
+		initialize: function() {
+
+		},
+
+		render: function() {
+			this.$el.html( this.template( this.model.toJSON() ) );
+
+			return this;
+		},
+
+	})
 
 	var AppView = Backbone.View.extend({
 		events: {
 			'click button#beta-btn': 'loadBetaList',
 			'click button#session-btn': 'loadNewSession',
 			'click button#get-beta-btn': 'getBetaList',
-
 		},
 
 		initialize: function() {
@@ -97,8 +107,8 @@ var spotr = (function($) {
 			// Observes collection for new models and
 			// when new model is added, appendSession is called
 			// and passed new model
-			this.listenTo(app.collection.sessions, 'add', this.appendSession);
-
+			// this.listenTo(app.collections.sessions, 'add', this.appendSession);
+			this.listenTo(app.collections.beta, 'add', this.appendBeta);
 		},
 
 		appendSession: function(sessionModel) {
@@ -123,16 +133,27 @@ var spotr = (function($) {
 		},
 
 		getBetaList: function() {
+			app.collections.beta.fetch({
+				url: 'problem/beta/' + $('#problem-id-input').val(),
+			});
 
+			console.log('fetched');
+		},
+
+		appendBeta: function(beta) {
+			var view = new BetaView({model: beta });
+		
 		}
 
 	});
+
 
 	var AppRouter = Backbone.Router.extend({
 		routes: {
 			'': 'index',
 			'session': 'session',
 			'problem': 'problem',
+			'beta': 'beta',
 		},
 
 		index: function() {
@@ -145,10 +166,15 @@ var spotr = (function($) {
 
 		problem: function() {
 
+		},
+
+		beta: function() {
+
 		}
 	})
 
 	// app.collection.sessions = new SessionCollection;
+	app.collections.beta = new BetaList;
 	app.views.appView = new AppView;
 	app.router = new AppRouter;
 
@@ -156,6 +182,11 @@ var spotr = (function($) {
 
 	return app;
 })(jQuery);
+
+
+
+
+
 
 
 function test() {
@@ -177,3 +208,10 @@ function test() {
 }
 
 
+	var FooView = Backbone.View.extend({
+		el: 'div',
+	})
+
+
+
+	var foo = new FooView

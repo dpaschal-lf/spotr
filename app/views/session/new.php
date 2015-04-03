@@ -2,7 +2,7 @@
 	<button id='new-session-btn' type='button'>New Session</button>
 </section>
 
-<script id='session-item-template' type='text/template'>
+<script id='session-item-tmpl' type='text/template'>
 	<li>
 		<header class='grade'>V1</header>
 		<%= v1 %>

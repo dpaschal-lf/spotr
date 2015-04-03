@@ -8,3 +8,6 @@
 		<button id='post-beta-btn' type='button'>Log Session</button>
 	</main>
 </div>
+<script id='user-beta-tmpl' type='text/template'>
+	<p><%= name %></p>
+</script>
