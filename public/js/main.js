@@ -77,7 +77,7 @@ var spotr = (function($) {
 
 		className: 'beta-item',
 
-		template: _.template( '<p><%= name %></p><p><%= postDate %></p>' ),
+		template: _.template( '<div><p><%= name %></p><p><%= postDate %></p> <video height="300" width="300" src="<%= mediaPath %>" controls></video></div>' ),
 
 		events: {
 			
@@ -87,13 +87,15 @@ var spotr = (function($) {
 
 		},
 
-		render: function() {
-			this.$el.html( this.template( this.model.toJSON() ) );
+		html: function() {
+			// this.$el.html( this.template( this.model.toJSON() ) );
 
-			return this;
+			return this.template( this.model.toJSON() ) ;
 		},
 
 	})
+
+	
 
 	var AppView = Backbone.View.extend({
 		events: {
@@ -142,11 +144,11 @@ var spotr = (function($) {
 
 		appendBeta: function(beta) {
 			var view = new BetaView({model: beta });
-		
+
+			this.$el.append( view.html() );
 		}
 
 	});
-
 
 	var AppRouter = Backbone.Router.extend({
 		routes: {
@@ -208,10 +210,3 @@ function test() {
 }
 
 
-	var FooView = Backbone.View.extend({
-		el: 'div',
-	})
-
-
-
-	var foo = new FooView
