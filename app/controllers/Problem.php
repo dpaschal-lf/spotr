@@ -14,7 +14,11 @@ class Problem extends App\Controller
 	{	
 		$beta = new Model\Beta();
 	
-		echo json_encode($beta->get($tag));
+		if ($beta->get($tag)) {
+			echo json_encode($beta->get($tag));
+		} else {
+			echo 'No matches';
+		}
 	}
 }
 

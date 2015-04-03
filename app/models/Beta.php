@@ -5,7 +5,9 @@ use App;
 class Beta extends App\Model 
 {
 	public function get($tag)
-	{
+	{	
+		$tag = App\Sanitizer::clean($tag);
+		
 		$sql = "SELECT users.name, problems_media.media_path, problems_media.post_date
 				FROM users
 				INNER JOIN problems_media
@@ -28,6 +30,8 @@ class Beta extends App\Model
 			}
 
 			return $return;
+		} else {
+			return false;
 		}
 	}
 }
