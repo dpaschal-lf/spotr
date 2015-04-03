@@ -52,10 +52,44 @@ var spotr = (function($) {
 	// 	model: SessionModel,
 	// });
 
+	var UploadedBeta = Backbone.Model.extend({
+		defaults: function() {
+			return {
+
+			}
+		},
+
+		urlRoot: 'problem/beta',
+
+		url: function() {
+			var url = this.urlRoot + '/'  + this.id;
+
+			return url;
+		}
+	});
+
+	var BetaList = Backbone.Collection.extend({
+		model: UploadedBeta,
+
+		url: 'problem/beta/',
+
+		initialize: function () {
+			var self = this;
+
+			this.fetch({
+				url: self.url + 'maad',
+			});
+		}
+	})
+
+	window.foo = new BetaList;
+
 	var AppView = Backbone.View.extend({
 		events: {
-			'click button#get-beta-btn': 'loadBetaList',
-			'click button#log-session-btn': 'loadNewSession',
+			'click button#beta-btn': 'loadBetaList',
+			'click button#session-btn': 'loadNewSession',
+			'click button#get-beta-btn': 'getBetaList',
+
 		},
 
 		initialize: function() {
@@ -85,8 +119,13 @@ var spotr = (function($) {
 
 		loadNewSession: function() {
 			// this.$el.load('routes/beta/list');
-			alert('asdasdad');
+			
+		},
+
+		getBetaList: function() {
+
 		}
+
 	});
 
 	var AppRouter = Backbone.Router.extend({
@@ -119,5 +158,22 @@ var spotr = (function($) {
 })(jQuery);
 
 
+function test() {
+	$.ajax({
+		url: 'problem/beta',
+		data: {
+			id: 'maad'
+		},
+		method: 'get',
+		dataType: 'JSON',
+		success: function(response) {
+			console.log(response);
+		},
+		error: function(response) {
+			console.log(response);
+		}
+
+	})
+}
 
 

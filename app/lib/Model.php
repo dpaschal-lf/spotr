@@ -5,7 +5,7 @@ abstract class Model
 {
 	public function __construct() 
 	{
-		// $this->conn = new Data();
+		$this->data = new Data();
 	}
 }
 

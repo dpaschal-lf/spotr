@@ -1,6 +1,7 @@
 <?php
 namespace Controller;
 use App;
+use Model;
 
 class Home extends App\Controller 
 {

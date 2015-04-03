@@ -10,12 +10,15 @@ class Problem extends App\Controller
 		$this->returnView('problem/index');
 	}
 
-	public function betaList()
-	{
-		$m = new Model\Problem();
-
-		print_r($m);
+	public function beta($tag)
+	{	
+		$beta = new Model\Beta();
+	
+		echo json_encode($beta->get($tag));
 	}
 }
+
+
+
 
 ?>

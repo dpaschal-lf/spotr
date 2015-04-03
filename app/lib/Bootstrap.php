@@ -19,10 +19,14 @@ class Bootstrap
 		} else {
 			$this->action = $_GET['action'];
 		}
-			
-		$m = new Model\Problem();
 
-		print_r($m);
+
+		if ($_GET['id'] === '') {
+			$this->id = 'index';
+		} else {
+			$this->id = $_GET['id'];
+		}
+
 	}
 
 	public static function getInstance()
@@ -46,7 +50,7 @@ class Bootstrap
 			if (in_array('App\Controller', $parents)) {
 				if (method_exists("Controller\\$this->controller", $this->action)) {
 					$class = "Controller\\$this->controller";
-					return new $class($this->controller, $this->action);
+					return new $class($this->controller, $this->action, $this->id);
 				} else {
 					echo 'error one';
 				} 
