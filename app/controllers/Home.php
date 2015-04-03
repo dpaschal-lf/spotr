@@ -6,7 +6,9 @@ class Home extends App\Controller
 {
 	public function index() 
 	{
-		$this->return_view('session/new');
+		require_once('app/views/header.php');
+		$this->returnView('home/index');
+		require_once('app/views/footer.php');
 	}
 }
 

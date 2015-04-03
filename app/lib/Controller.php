@@ -10,11 +10,11 @@ abstract class Controller
 		$this->{$this->action}();
 	}
 
-	public function return_view($view) 
+	public function returnView($view) 
 	{
 		$src = 'app/views/' . $view . '.php';
 		
-		require($src);
+		require_once($src);
 	}
 }
 

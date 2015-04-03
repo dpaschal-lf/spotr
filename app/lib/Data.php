@@ -12,6 +12,7 @@ class Data
 	{	
 		$this->conn = new \mysqli(self::$host, self::$user, self::$pw, self::$db);
 	}
+	
 }
 ?>	
 

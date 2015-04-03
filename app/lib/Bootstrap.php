@@ -1,11 +1,13 @@
 <?php
 namespace App;
 use Controller;
+use Model;
 
 class Bootstrap 
 {
 	protected function __construct()
 	{
+
 		if ($_GET['controller'] === '') {
 			$this->controller = 'home';
 		} else {
@@ -17,6 +19,10 @@ class Bootstrap
 		} else {
 			$this->action = $_GET['action'];
 		}
+			
+		$m = new Model\Problem();
+
+		print_r($m);
 	}
 
 	public static function getInstance()

@@ -1,5 +1,5 @@
 <section id='new-session'>
-	<a href='#session'><button id='new-session-btn' type='button'>New Session</button></a>
+	<button id='new-session-btn' type='button'>New Session</button>
 </section>
 
 <script id='session-item-template' type='text/template'>

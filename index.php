@@ -7,13 +7,9 @@ session_start();
 
 require_once('app/lib/autoload.php');
 
-require_once('app/views/header.php');
-
 $app = App\Bootstrap::getInstance();
 
 $app->init();
-
-require_once('app/views/footer.php');
 
 ?>
 
