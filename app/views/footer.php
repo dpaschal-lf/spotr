@@ -8,6 +8,5 @@
 <script src='/public/js/lib/text.js'></script>
 <script src='/public/js/lib/underscore.js'></script>
 <script src='/public/js/lib/backbone.js'></script>
-<script src='/public/js/main.js'></script>
 </body>
 </html>

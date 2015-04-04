@@ -1,25 +1,38 @@
-var AppRouter = Backbone.Router.extend({
-		routes: {
-			'': 'index',
-			'session': 'session',
-			'problem': 'problem',
-			'beta': 'beta',
-		},
+define(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
 
-		index: function() {
+	var AppRouter = Backbone.Router.extend({
+			routes: {
+				'': 'index',
+				'session': 'session',
+				'problem': 'problem',
+				'beta': 'beta',
+			},
 	
-		},
-
-		session: function() {
-			
-		},
-
-		problem: function() {
-
-		},
-
-		beta: function() {
+			index: function() {
 		
+			},
+	
+			session: function() {
+				
+			},
+	
+			problem: function() {
+	
+			},
+	
+			beta: function() {
+			
+	
+			}
+	});
 
-		}
+	var init = function() {
+		var router = new AppRouter;
+	};
+
+	return {
+		init: init,
+	}
+	
 });
+
