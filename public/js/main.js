@@ -1,3 +1,9 @@
+var app = {
+	views: {},
+	collections: {},
+	router: null,
+};
+
 require.config({
 	paths: {
 		jquery: [
@@ -10,14 +16,14 @@ require.config({
 	}
 });
 
-require(['jquery', 'underscore', 'backbone', 'router'], function($, _, Backbone, Router) {
-	Router.init();
-});
+/* 
+* ROUTER
+*/
+require(['jquery', 'underscore', 'backbone', 'router'], 
+	function($, _, Backbone, Router) {
+		Router.init();
+		Backbone.history.start();
+	}
+);
 
 
-
-
-
-require(['lib/text!../templates/beta.html'], function(beta) {
-  console.log(beta);
-})
