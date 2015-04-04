@@ -6,6 +6,7 @@ require.config({
 		],
 		underscore: 'lib/underscore',
 		backbone: 'lib/backbone',
+		templates: '../templates',
 	}
 });
 
@@ -15,3 +16,8 @@ require(['jquery', 'underscore', 'backbone', 'router'], function($, _, Backbone,
 
 
 
+
+
+require(['lib/text!../templates/beta.html'], function(beta) {
+  console.log(beta);
+})

@@ -1,5 +1,4 @@
 define(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
-
 	var AppRouter = Backbone.Router.extend({
 			routes: {
 				'': 'index',
@@ -9,7 +8,7 @@ define(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
 			},
 	
 			index: function() {
-		
+				var appView = new AppView;
 			},
 	
 			session: function() {
@@ -22,7 +21,6 @@ define(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
 	
 			beta: function() {
 			
-	
 			}
 	});
 
