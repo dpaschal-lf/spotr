@@ -127,6 +127,7 @@ var spotr = (function($) {
 
 		loadBetaList: function() {
 			this.$el.load('problem/index');
+			location.hash = 'beta';
 		},
 
 		loadNewSession: function() {
@@ -163,7 +164,7 @@ var spotr = (function($) {
 		},
 
 		session: function() {
-			window.location.hash = 'session';
+			
 		},
 
 		problem: function() {
@@ -171,6 +172,7 @@ var spotr = (function($) {
 		},
 
 		beta: function() {
+		
 
 		}
 	})
@@ -208,5 +210,11 @@ function test() {
 
 	})
 }
+
+var TestView = Backbone.View.extend({
+	el: 'article'
+});
+
+var testView = new TestView;
 
 
