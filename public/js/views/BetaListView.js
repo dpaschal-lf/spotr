@@ -9,6 +9,7 @@ define(['jquery', 'underscore', 'backbone', 'views/BetaView', 'collections/betaC
 			},
 
 			initialize: function() {
+				this.$el.unbind('click');
 				this.$el.html(betaListPage);
 
 				this.listenTo(app.collections.betaCollection, 'add', this.appendBeta);
@@ -19,11 +20,11 @@ define(['jquery', 'underscore', 'backbone', 'views/BetaView', 'collections/betaC
 				var inputVal = $('#problem-id-input').val(),
 					$amber = $('#beta-amber');
 
-				app.collections.betaCollection.reset();
 
 				if (!inputVal) {
-					$('#beta-amber').html('Please provide problem id');
+					$amber.html('Please provide problem id');
 				} else {
+					app.collections.betaCollection.reset();
 					app.collections.betaCollection.fetch({
 						url: '/problem/beta/' + inputVal,
 						success: function() {
@@ -48,6 +49,11 @@ define(['jquery', 'underscore', 'backbone', 'views/BetaView', 'collections/betaC
 			// not reliable
 			showVideo: function(e) {
 				$(e.target).parents().eq(0).toggleClass('selected');
+			},
+
+			render: function() {
+				this.$el.html(betaListPage);
+				location.hash = 'betalListView';
 			},
 
 		});

@@ -10,6 +10,7 @@ define(['jquery', 'underscore', 'backbone', 'lib/text!../pages/uploadBeta.html']
 			},
 
 			initialize: function() {
+				this.$el.unbind('click');
 				this.$el.html(uploadBetaPage);
 			},
 
@@ -28,7 +29,12 @@ define(['jquery', 'underscore', 'backbone', 'lib/text!../pages/uploadBeta.html']
 
 			uploadFile: function() {
 				
-			}
+			},
+
+			render: function() {
+				this.$el.html(uploadBetaPage);
+				location.hash = 'uploadBeta';
+			},
 		});
 
 		return {

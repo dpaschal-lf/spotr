@@ -5,7 +5,7 @@ class User
 {
 	public function __construct($session)
 	{
-		if ( isset($session['userinfo']) ) {
+		if (isset($session['userinfo'])) {
 			$this->loggedIn = true;
 			$this->info = $session['userinfo'];
 		}
@@ -15,11 +15,14 @@ class User
 
 	public function login() 
 	{	
-		$username = App\Sanitizer::clean( $_POST['username'] );
+		$username = App\Sanitizer::clean($_POST['email']);
 		
-		$password = sha1( $_POST['password'] );
+		$password = sha1($_POST['password']);
 
-		$sql = "SELECT id, username, name, email, about, access FROM users WHERE username = '$username' AND password = '$password'";
+		$sql = "SELECT id, email, name, height, weight, ape_index 
+				FROM users 
+				WHERE username = '$email' 
+				AND password = '$password'";
 
 		$result = $this->data->conn->query($sql);
 

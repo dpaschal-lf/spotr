@@ -26,7 +26,6 @@ class Bootstrap
 		} else {
 			$this->id = $_GET['id'];
 		}
-
 	}
 
 	public static function getInstance()
@@ -44,6 +43,10 @@ class Bootstrap
 
 	public function init() 
 	{
+		session_start();
+
+		$GLOBALS['user'] = new User();
+
 		if (class_exists('Controller\\' . $this->controller)) {
 			$parents = class_parents('Controller\\' . $this->controller);
 

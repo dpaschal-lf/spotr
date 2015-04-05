@@ -25,3 +25,19 @@ require(['jquery', 'underscore', 'backbone', 'router'],
 );
 
 
+function test() {
+	$.ajax({
+		url: 'User/login',
+		method: 'POST',
+		data: {
+			email: 'jibrianh@gmail.com',
+			password: 'deliriou5',
+		},
+		success: function(response) {
+			console.log(response);
+		},
+		error: function(response) {
+			console.log(response);
+		}
+	})
+}
