@@ -17,9 +17,7 @@ require.config({
 	}
 });
 
-/* 
-* ROUTER
-*/
+/* Router */
 require(['jquery', 'underscore', 'backbone', 'router'], 
 	function($, _, Backbone, Router) {
 		Router.init();

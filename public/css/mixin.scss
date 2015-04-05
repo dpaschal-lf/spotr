@@ -1,0 +1,10 @@
+@mixin transform($val) {
+	-webkit-transform: $val;
+	 -ms-transform: $val;
+	  transform: $val;
+}
+
+@mixin transition($val) {
+	-webkit-transition: $val;
+	 transition: $val;
+}

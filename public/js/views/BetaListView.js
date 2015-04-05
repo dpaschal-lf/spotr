@@ -1,11 +1,11 @@
-define(['jquery', 'underscore', 'backbone', 'views/BetaView', 'collections/BetaCollection', 'lib/text!../pages/betaList.html'],
-	function($, _, Backbone, BetaView, BetaCollection, betaListPage) {
+define(['jquery', 'underscore', 'backbone', 'views/BetaView', 'collections/betaCollection', 'lib/text!../pages/betaList.html'],
+	function($, _, Backbone, BetaView, betaCollection, betaListPage) {
 		var BetaListView = Backbone.View.extend({
 			el: '#app-container',
 
 			events: {
 				'click div#getBeta-btn': 'getBetaList',
-				'click a': 'showVideo',
+				'click div.betaExpand-btn': 'showVideo',
 				'click div#close-btn': 'returnHome',
 			},
 

@@ -194,13 +194,25 @@ div.header-btn {
 
 /* Beta */
 .beta {
-  height: 50px;
+  min-height: 50px;
   border: 1px solid black; }
   .beta video {
-    display: none; }
+    display: none;
+    width: 100%;
+    height: 300px; }
 
 .selected video {
   display: block; }
+
+.beta:hover {
+  background: red;
+  -webkit-transition: 1s ease;
+  transition: 1s ease; }
+
+.betaExpand-btn {
+  background: red;
+  padding: 5px;
+  border: 1px solid black; }
 
 /* Classes */
 .is-centered-width {
@@ -218,7 +230,6 @@ div.header-btn {
 .primary-btn {
   background: white;
   border: 1px solid black;
-  display: inline-block;
   width: 100px; }
 
 .btn {

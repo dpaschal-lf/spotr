@@ -1,5 +1,5 @@
-define(['jquery', 'underscore', 'backbone', 'views/BetaView', 'collections/BetaCollection', 'lib/text!../pages/home.html'], 
-	function($, _, Backbone, BetaView, BetaCollection, homePage) {
+define(['jquery', 'underscore', 'backbone', 'views/BetaView', 'collections/betaCollection', 'lib/text!../pages/home.html'], 
+	function($, _, Backbone, BetaView, betaCollection, homePage) {
 
 		var AppView = Backbone.View.extend({
 			events: {
