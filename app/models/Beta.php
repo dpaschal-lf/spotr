@@ -18,35 +18,23 @@ class Beta extends App\Model
 
 		$results = $this->data->conn->query($sql);
 
-		$return = [
-			'success' => true,
-			'data' => [],
-			'message' => '',
-		];
+		$return = [];
 		
 		if ($results->num_rows > 0) {
 			while ($beta = $results->fetch_assoc()) {
-				$return['data'][] = [
+				$return[] = [
 					'name' => $beta['name'],
 					'mediaPath' => $beta['media_path'],
 					'postDate' => date('m/d', $beta['post_date']),
 				];
 			}
 
-			$return['message'] = count($return['data']) . ' matches found'; 
-
 			return $return;
 		} else {
-			$return['success'] = false;
-			$return['message'] = 'No beta found';
-
-			return $return;
+			return false;
 		}
-
 	}
 }
 
 ?>	
-
-
 

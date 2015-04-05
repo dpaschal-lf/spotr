@@ -16,13 +16,22 @@ define(['jquery', 'underscore', 'backbone', 'views/BetaView', 'collections/betaC
 			},
 
 			getBetaList: function() {
-				var inputVal = $('#problem-id-input').val();
+				var inputVal = $('#problem-id-input').val(),
+					$amber = $('#beta-amber');
+
+				app.collections.betaCollection.reset();
 
 				if (!inputVal) {
 					$('#beta-amber').html('Please provide problem id');
 				} else {
 					app.collections.betaCollection.fetch({
-						input: inputVal,
+						url: '/problem/beta/' + inputVal,
+						success: function() {
+							$amber.empty();
+						},
+						error: function() {
+							$amber.empty().html('No matches found');
+						}
 					});	
 				}
 			},
@@ -50,3 +59,7 @@ define(['jquery', 'underscore', 'backbone', 'views/BetaView', 'collections/betaC
 		}
 	}
 );
+
+
+
+
