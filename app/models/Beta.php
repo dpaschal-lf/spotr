@@ -42,6 +42,7 @@ class Beta extends App\Model
 
 			return $return;
 		}
+
 	}
 }
 

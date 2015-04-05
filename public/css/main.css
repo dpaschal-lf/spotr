@@ -170,19 +170,22 @@ a:active {
 		Header
 		Beta
 		Classes
-
 ******************************/
 h2 {
   font-size: 50px;
   display: inline-block;
   text-transform: uppercase; }
 
+input[type='file'] {
+  display: none; }
+
 /* Structure */
 html,
 body {
   background: #78BBEF;
   font-family: 'dense', 'arial';
-  letter-spacing: 4px; }
+  letter-spacing: 4px;
+  padding: 10px; }
 
 /* Header */
 div.header-btn {
@@ -210,11 +213,6 @@ div.header-btn {
 
 .selected video {
   display: block; }
-
-.beta:hover {
-  background: red;
-  -webkit-transition: 1s ease;
-  transition: 1s ease; }
 
 .betaExpand-btn {
   background: red;
