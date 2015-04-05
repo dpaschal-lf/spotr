@@ -7,7 +7,6 @@ class User extends App\Controller
 {
 	public function login() 
 	{	
-		echo 'sadfsf';
 		$user = new Model\User();
 
 		$userInfo = $user->get($_POST['email'], $_POST['password']);
@@ -28,9 +27,7 @@ class User extends App\Controller
 			];
 		}
 
-		print_r($_SESSION);
 		echo json_encode($success);
-
 	}
 
 	public function logout() 
