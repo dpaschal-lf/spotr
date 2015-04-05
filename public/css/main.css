@@ -172,11 +172,17 @@ a:active {
 		Classes
 
 ******************************/
+h2 {
+  font-size: 50px;
+  display: inline-block;
+  text-transform: uppercase; }
+
 /* Structure */
 html,
 body {
   background: #78BBEF;
-  font-family: 'dense', 'arial'; }
+  font-family: 'dense', 'arial';
+  letter-spacing: 4px; }
 
 /* Header */
 div.header-btn {
@@ -195,7 +201,8 @@ div.header-btn {
 /* Beta */
 .beta {
   min-height: 50px;
-  border: 1px solid black; }
+  border: 1px solid black;
+  margin: 15px 0; }
   .beta video {
     display: none;
     width: 100%;
@@ -214,6 +221,11 @@ div.header-btn {
   padding: 5px;
   border: 1px solid black; }
 
+#problem-id-input {
+  box-sizing: border-box;
+  padding: 5px;
+  width: 100%; }
+
 /* Classes */
 .is-centered-width {
   margin: 0 auto;
@@ -230,10 +242,13 @@ div.header-btn {
 .primary-btn {
   background: white;
   border: 1px solid black;
-  width: 100px; }
+  text-align: center; }
 
 .btn {
+  box-sizing: border-box;
   font-size: 30px;
-  text-transform: uppercase; }
+  padding: 5px;
+  text-transform: uppercase;
+  margin: 10px 0; }
 
 /*# sourceMappingURL=main.css.map */

@@ -10,8 +10,8 @@ require.config({
 			'https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min',
 			'lib/jquery-1.11.2.min',
 		],
-		underscore: 'lib/underscore',
-		backbone: 'lib/backbone',
+		underscore: 'lib/underscore-min',
+		backbone: 'lib/backbone-min',
 		templates: '../templates',
 		pages: '../pages',
 	}

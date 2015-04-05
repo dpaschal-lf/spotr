@@ -1,9 +1,10 @@
-define(['jquery', 'underscore', 'backbone', 'views/AppView', 'views/betaListView', 'collections/betaCollection'], 
-	function($, _, Backbone, AppView, betaListView, betaCollection) {
+define(['jquery', 'underscore', 'backbone', 'views/AppView', 'views/betaListView', 'collections/betaCollection', 'views/uploadBetaView'], 
+	function($, _, Backbone, AppView, betaListView, betaCollection, betaUploadView) {
 		var AppRouter = Backbone.Router.extend({
 				routes: {
 					'': 'index',
 					'betaList': 'betaList',
+					'uploadBeta': 'uploadBeta',
 				},
 	
 				index: function() {
@@ -15,6 +16,10 @@ define(['jquery', 'underscore', 'backbone', 'views/AppView', 'views/betaListView
 					betaCollection.init();
 					betaListView.init();
 				},
+
+				uploadBeta: function() {
+					betaUploadView.init();
+				}
 		});
 
 		var init = function() {

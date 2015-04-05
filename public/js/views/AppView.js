@@ -3,8 +3,7 @@ define(['jquery', 'underscore', 'backbone', 'views/BetaView', 'collections/betaC
 
 		var AppView = Backbone.View.extend({
 			events: {
-				// 'click div#beta-btn': 'loadBetaList',
-				'click button#get-beta-btn': 'getBetaList',
+				
 			},
 	
 			initialize: function() {
@@ -20,18 +19,6 @@ define(['jquery', 'underscore', 'backbone', 'views/BetaView', 'collections/betaC
 			loadBetaList: function() {
 				this.$el.load('problem/index');
 			},
-	
-			getBetaList: function() {
-				app.collections.betaCollection.fetch({
-					url: 'problem/beta/' + $('#problem-id-input').val(),
-				});
-			},
-	
-			appendBeta: function(beta) {
-				var view = new BetaView({model: beta });
-	
-				this.$el.append( view.render().el );
-			}
 	
 		});
 	

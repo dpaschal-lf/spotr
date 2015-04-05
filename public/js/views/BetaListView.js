@@ -16,9 +16,19 @@ define(['jquery', 'underscore', 'backbone', 'views/BetaView', 'collections/betaC
 			},
 
 			getBetaList: function() {
-				app.collections.betaCollection.fetch({
-					url: 'problem/beta/' + $('#problem-id-input').val(),
-				});
+				var inputVal = $('#problem-id-input').val();
+
+				if (inputVal !== '') {
+					app.collections.betaCollection.fetch({
+						url: 'problem/beta/' + inputVal,
+						success: function(model, response, options) {
+							console.log(options);
+						},
+						error: function(model, response, options) {
+							$('#beta-amber').html('No beta found');
+						},
+					});	
+				} 
 			},
 	
 			appendBeta: function(beta) {
