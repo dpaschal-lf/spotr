@@ -20,15 +20,18 @@ define(['jquery', 'underscore', 'backbone', 'views/BetaView', 'collections/betaC
 
 				if (inputVal !== '') {
 					app.collections.betaCollection.fetch({
-						url: 'problem/beta/' + inputVal,
+						input: inputVal,
+					
 						success: function(model, response, options) {
-							console.log(options);
+							console.log(model);
 						},
 						error: function(model, response, options) {
-							$('#beta-amber').html('No beta found');
+							// $('#beta-amber').html('No beta found');
+							console.log(model);
 						},
 					});	
 				} 
+
 			},
 	
 			appendBeta: function(beta) {
