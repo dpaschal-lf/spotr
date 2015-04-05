@@ -154,35 +154,75 @@ input,
 select {
   vertical-align: middle; }
 
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+  text-decoration: none; }
+
+@font-face {
+  font-family: 'dense';
+  src: '../fonts/Dense-Regular.otf'; }
 /******************************
 	TABLE OF CONTENTS
 		Structure
+		Header
+		Beta
+		Classes
 
 ******************************/
-/******************************
-	STRUCTURE
-******************************/
+/* Structure */
 html,
 body {
-  background: #78BBEF; }
+  background: #78BBEF;
+  font-family: 'dense', 'arial'; }
 
-header#main-header {
-  background: black;
-  color: white; }
+/* Header */
+div.header-btn {
+  background: white;
+  border: 1px solid; }
 
-#new-session li {
-  border: 2px solid black;
-  border-radius: 5px;
-  height: 80px;
-  margin: 5px;
-  overflow: hidden; }
-  #new-session li header {
-    background: black;
-    color: white;
-    text-align: center; }
+#log-btn {
+  float: left; }
 
+#settings-btn {
+  float: right; }
+
+#close-btn {
+  float: right; }
+
+/* Beta */
+.beta {
+  height: 50px;
+  border: 1px solid black; }
+  .beta video {
+    display: none; }
+
+.selected video {
+  display: block; }
+
+/* Classes */
 .is-centered-width {
   margin: 0 auto;
   max-width: 500px; }
+
+.is-cleared:before,
+.is-cleared:after {
+  display: table;
+  content: ""; }
+
+.is-cleared:after {
+  clear: both; }
+
+.primary-btn {
+  background: white;
+  border: 1px solid black;
+  display: inline-block;
+  width: 100px; }
+
+.btn {
+  font-size: 30px;
+  text-transform: uppercase; }
 
 /*# sourceMappingURL=main.css.map */

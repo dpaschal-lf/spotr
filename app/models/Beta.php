@@ -8,12 +8,12 @@ class Beta extends App\Model
 	{	
 		$tag = App\Sanitizer::clean($tag);
 		
-		$sql = "SELECT users.name, problems_media.media_path, problems_media.post_date
+		$sql = "SELECT users.name, beta.media_path, beta.post_date
 				FROM users
-				INNER JOIN problems_media
-				ON users.id = problems_media.users_id
+				INNER JOIN beta
+				ON users.id = beta.users_id
                 INNER JOIN problems
-                ON problems_media.problems_id = problems.id
+                ON beta.problems_id = problems.id
 				WHERE problems.tag = '$tag'";
 
 		$results = $this->data->conn->query($sql);

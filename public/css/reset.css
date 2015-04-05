@@ -154,4 +154,11 @@ input,
 select {
   vertical-align: middle; }
 
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+  text-decoration: none; }
+
 /*# sourceMappingURL=reset.css.map */

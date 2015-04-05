@@ -6,18 +6,6 @@ var spotr = (function($) {
 		router: null,
 	};
 
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
 	// app.collection.sessions = new SessionCollection;
 	app.collections.beta = new BetaList;
 	app.views.appView = new AppView;

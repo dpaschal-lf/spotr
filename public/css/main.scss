@@ -1,65 +1,92 @@
 @import 'reset.scss';
+@font-face {
+	font-family: 'dense';
+	src: '../fonts/Dense-Regular.otf';
+}
 /******************************
 	TABLE OF CONTENTS
 		Structure
+		Header
+		Beta
+		Classes
 
 ******************************/
 
-/******************************
-	STRUCTURE
-******************************/
+/* Structure */
 html,
 body {
 	background: #78BBEF;
-}
-
-header#main-header {
-	background: black;
-	color: white;
+	font-family: 'dense', 'arial';
 }
 
 div#app-container {
 }
 
-#new-session {
-	li {
-		border: 2px solid black;
-		border-radius: 5px;
-		height: 80px;
-		margin: 5px;
-		overflow: hidden;
-		header {
-			background: black;
-			color: white;
-			text-align: center;
-		}
-	}
-	li:first-child {
-		// background: #FAFEF9;
-	}
+header#app-header {
+}
 
-	li:nth-child(2) {
-		// background: #F3FE7C;
-	}
 
-	li:nth-child(3) {
-		// background: #FED14B;
-	}
 
-	li:nth-child(4) {
-		// background: #37AD38;
-	}
+/* Header */
+div.header-btn {
+	background: white;
+	border: 1px solid;
+}
 
-	li:nth-child(5) {
-		// background: #3E9DFE;
-	}
+#log-btn {
+	float: left;
+}
 
-	li:nth-child(6) {
-		// background: #977BFE;
+#settings-btn {
+	float: right;
+}
+
+#close-btn {
+	float: right;
+}
+
+
+/* Beta */
+.beta {
+	height: 50px;
+	border: 1px solid black;
+	video {
+		display: none;
 	}
 }
 
+.selected {
+	video {
+		display: block;
+	}
+}
+
+/* Classes */
 .is-centered-width {
 	margin: 0 auto;
 	max-width: 500px;
 }
+
+.is-cleared:before,
+.is-cleared:after {
+	display: table;
+	content: '',
+}
+
+.is-cleared:after {
+	clear: both;
+}
+
+.primary-btn {
+	background: white;
+	border: 1px solid black;
+	display: inline-block;
+	width: 100px;
+}
+
+.btn {
+	font-size: 30px;
+	text-transform: uppercase;
+}
+
+

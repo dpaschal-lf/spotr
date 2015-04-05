@@ -1,15 +1,23 @@
-var Beta = Backbone.Model.extend({
-	defaults: function() {
-		return {
+define(['jquery', 'underscore', 'backbone'],
+	function($, _, Backbone) {
+		var BetaModel = Backbone.Model.extend({
+			defaults: function() {
+				return {
 
-		}
-	},
+			}
+		},
 
-	urlRoot: 'problem/beta',
+		urlRoot: 'problem/beta',
 
-	url: function() {
-		var url = this.urlRoot + '/'  + this.id;
+		url: function() {
+			var url = this.urlRoot + '/'  + this.id;
 
-		return url;
-	},
-});
+			return url;
+		},
+	});
+
+	return BetaModel;
+
+	}
+);
+

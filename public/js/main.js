@@ -13,6 +13,7 @@ require.config({
 		underscore: 'lib/underscore',
 		backbone: 'lib/backbone',
 		templates: '../templates',
+		pages: '../pages',
 	}
 });
 
@@ -22,7 +23,6 @@ require.config({
 require(['jquery', 'underscore', 'backbone', 'router'], 
 	function($, _, Backbone, Router) {
 		Router.init();
-		Backbone.history.start();
 	}
 );
 

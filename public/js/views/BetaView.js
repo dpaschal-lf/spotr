@@ -2,10 +2,10 @@ define(['jquery', 'underscore', 'backbone', 'lib/text!../templates/beta.html'],
 	function($, _, Backbone, betaTmpl) {
 
 		var BetaView = Backbone.View.extend({
-			el: 'div',
-		
-			className: 'beta-item',
-		
+			tagName: 'div',
+
+			className: 'beta',
+
 			template: _.template(betaTmpl),
 		
 			events: {
@@ -16,18 +16,15 @@ define(['jquery', 'underscore', 'backbone', 'lib/text!../templates/beta.html'],
 				
 			},
 		
-			html: function() {
-				// this.$el.html( this.template( this.model.toJSON() ) );
-		
-				return this.template( this.model.toJSON() ) ;
+			render: function() {
+				this.$el.html(this.template(this.model.toJSON()));
+
+				return this;
 			},
 		
 		});
 
-		return {
-			init: function() {
-				app.views.betaView = new BetaView;
-			},
-		}
+		return BetaView;
+	
 	} 
 );
