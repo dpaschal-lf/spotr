@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'lib/text!../pages/uploadBeta.html'], 
+define(['jquery', 'underscore', 'backbone', 'lib/text!../templates/uploadBeta.html'], 
 	function($, _, Backbone, uploadBetaPage) {
 		var UploadBetaView = Backbone.View.extend({
 			el: '#app-container',

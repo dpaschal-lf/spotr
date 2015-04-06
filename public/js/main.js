@@ -2,6 +2,7 @@ var app = {
 	views: {},
 	collections: {},
 	router: null,
+	user: null,
 };
 
 require.config({
@@ -41,3 +42,10 @@ function test() {
 		}
 	})
 }
+
+
+
+var html = '<h1><% if (name === "brian") { %><%= name %> <% } else { %> kjkjsfsdf <% } %></h1>'
+
+
+

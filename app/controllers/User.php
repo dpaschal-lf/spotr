@@ -27,7 +27,7 @@ class User extends App\Controller
 			];
 		}
 
-		echo json_encode($success);
+		echo json_encode($return);
 	}
 
 	public function logout() 
@@ -36,11 +36,11 @@ class User extends App\Controller
 
 		session_destroy();
 
-		$success = [
+		$return = [
 			'message' => 'Logout successful',
 		];
 
-		echo json_encode($success);	
+		echo json_encode($return);	
 	}
 }
 ?>

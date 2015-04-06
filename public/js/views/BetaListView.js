@@ -1,7 +1,9 @@
-define(['jquery', 'underscore', 'backbone', 'views/BetaView', 'collections/betaCollection', 'lib/text!../pages/betaList.html'],
+define(['jquery', 'underscore', 'backbone', 'views/BetaView', 'collections/betaCollection', 'lib/text!../templates/betaList.html'],
 	function($, _, Backbone, BetaView, betaCollection, betaListPage) {
 		var BetaListView = Backbone.View.extend({
 			el: '#app-container',
+
+			template: _.template(betaListPage),
 
 			events: {
 				'click div#getBeta-btn': 'getBetaList',
@@ -10,7 +12,9 @@ define(['jquery', 'underscore', 'backbone', 'views/BetaView', 'collections/betaC
 
 			initialize: function() {
 				this.$el.unbind('click');
-				this.$el.html(betaListPage);
+
+			
+				this.$el.html(this.template({loggedIn: true}));
 
 				this.listenTo(app.collections.betaCollection, 'add', this.appendBeta);
 				this.listenTo(app.collections.betaCollection, 'reset', this.removeBeta);
@@ -20,13 +24,12 @@ define(['jquery', 'underscore', 'backbone', 'views/BetaView', 'collections/betaC
 				var inputVal = $('#problem-id-input').val(),
 					$amber = $('#beta-amber');
 
-
 				if (!inputVal) {
 					$amber.html('Please provide problem id');
 				} else {
 					app.collections.betaCollection.reset();
 					app.collections.betaCollection.fetch({
-						url: '/problem/beta/' + inputVal,
+						url: 'problem/beta/' + inputVal,
 						success: function() {
 							$amber.empty();
 						},

@@ -11,8 +11,6 @@ $app = App\Bootstrap::getInstance();
 
 $app->init();
 
-print_r($_SESSION);
-
 ?>
 
 

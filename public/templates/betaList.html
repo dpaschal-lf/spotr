@@ -10,10 +10,15 @@
 	<a href='#betaList'>
 		<div id='getBeta-btn' class='primary-btn btn' type='button'>Get Beta</div>
 	</a>
-	<a href='#uploadBeta'>
-		<div id='uploadBeta-btn' class='primary-btn btn' type='button'>Upload Beta</div>
-	</a>
+	<% if (loggedIn === true) { %>
+		<a href='#uploadBeta'>
+			<div id='uploadBeta-btn' class='primary-btn btn' type='button'>Upload Beta</div>
+		</a>
+	<% } %>
 </main>
 <footer id='app-footer'>
 		
 </footer>
+
+
+

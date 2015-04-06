@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'lib/text!../pages/login.html'], 
+define(['jquery', 'underscore', 'backbone', 'lib/text!../templates/login.html'], 
 	function($, _, Backbone, loginPage) {
 		var LoginView = Backbone.View.extend({
 			el: '#app-container',
@@ -19,12 +19,15 @@ define(['jquery', 'underscore', 'backbone', 'lib/text!../pages/login.html'],
 				$.ajax({
 					url: 'User/login',
 					method: 'POST',
+					dataType: 'JSON',
 					data: {
 						email: emailVal,
 						password: passwordVal,
 					},
 					success: function(response) {
-						console.log(response);
+						app.user = {
+							isloggedIn: response.isLoggedIn,
+						}
 					},
 					error: function(response) {
 						console.log(response);
@@ -35,6 +38,7 @@ define(['jquery', 'underscore', 'backbone', 'lib/text!../pages/login.html'],
 			logout: function() {
 				$.ajax({
 					url: 'User/logout',
+					dataType: 'JSON',
 					success: function(response) {
 						console.log(response);
 					}, 
