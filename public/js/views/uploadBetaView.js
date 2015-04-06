@@ -1,7 +1,9 @@
 define(['jquery', 'underscore', 'backbone', 'lib/text!../templates/uploadBeta.html'], 
-	function($, _, Backbone, uploadBetaPage) {
+	function($, _, Backbone, uploadBetaTemplate) {
 		var UploadBetaView = Backbone.View.extend({
 			el: '#app-container',
+
+			template: _.template(uploadBetaTemplate),
 
 			events: {
 				'click div#uploadBeta-input': 'selectUploadFile',
@@ -11,20 +13,39 @@ define(['jquery', 'underscore', 'backbone', 'lib/text!../templates/uploadBeta.ht
 
 			initialize: function() {
 				this.$el.unbind('click');
-				this.$el.html(uploadBetaPage);
+				this.render();
 			},
 
 			selectUploadFile: function() {
 				$('#uploadBeta-hidden-input').trigger('click');
-
 			},
 
 			appendFileName: function(e) {
 				var path = e.target.value,
 					dir = path.split('\\'),
-					file = dir.pop();
+					fileName = dir.pop(),
+					files = e.target.files,
+					data = new FormData();
+
+    				$.each(files, function(key, val) {
+        				data.append(key, val);
+    				});
 				
-				this.$el.append(file);
+    				$.ajax({
+    					url: 'User/test',
+    					type: 'POST',
+    					data: data,
+    					cache: false,
+    					processData: false,
+    					contentType: false,
+    					success: function(response) {
+    						console.log(response);
+    					}
+    				})
+
+
+				
+				this.$el.append(fileName);
 			},
 
 			uploadFile: function() {
@@ -32,8 +53,10 @@ define(['jquery', 'underscore', 'backbone', 'lib/text!../templates/uploadBeta.ht
 			},
 
 			render: function() {
-				this.$el.html(uploadBetaPage);
+				this.$el.html(this.template());
 				location.hash = 'uploadBeta';
+
+				return this;
 			},
 		});
 

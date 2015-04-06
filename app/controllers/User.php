@@ -42,5 +42,10 @@ class User extends App\Controller
 
 		echo json_encode($return);	
 	}
+
+	public function test() 
+	{
+		print_r($_FILES);
+	}
 }
 ?>
