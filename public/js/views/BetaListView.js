@@ -29,7 +29,7 @@ define(['jquery', 'underscore', 'backbone', 'views/BetaView', 'collections/betaC
 				} else {
 					app.collections.betaCollection.reset();
 					app.collections.betaCollection.fetch({
-						url: 'problem/beta/' + inputVal,
+						url: 'Beta/spray/' + inputVal,
 						success: function() {
 							$amber.empty();
 						},
